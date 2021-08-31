@@ -41,11 +41,10 @@ class MainDrawer extends StatelessWidget {
           ),
           SizedBox(height: 20.0),
           drawerItem('Meals', Icons.restaurant, () {
-            if (ModalRoute.of(context)!.settings.name != '/')
-              Navigator.of(context).pushNamed('/');
+            Navigator.of(context).pushReplacementNamed('/');
           }),
           drawerItem('Settings', Icons.settings, () {
-            Navigator.of(context).pushNamed(SettingsScreen.routeName);
+            Navigator.of(context).pushReplacementNamed(SettingsScreen.routeName);
           }),
         ],
       ),
