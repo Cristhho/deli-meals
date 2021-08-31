@@ -4,7 +4,7 @@ import '../screens/settings_screen.dart';
 
 class MainDrawer extends StatelessWidget {
 
-  Widget drawerItem(String text, IconData icon, Function tapHandler) {
+  Widget drawerItem(String text, IconData icon, Function() tapHandler) {
     return ListTile(
       leading: Icon(icon, size: 26.0),
       title: Text(
@@ -15,7 +15,7 @@ class MainDrawer extends StatelessWidget {
           fontWeight: FontWeight.bold
         ),
       ),
-      onTap: () => tapHandler()
+      onTap: tapHandler
     );
   }
 
